@@ -1425,8 +1425,34 @@ html[dir="rtl"] .project-badge {
 .social-icon.ig:hover { color: #E1306C; background: rgba(225,48,108,0.1); }
 .social-icon.tt:hover { color: #FF0050; background: rgba(255,0,80,0.1); }
 .social-icon.fb:hover { color: #1877F2; background: rgba(24,119,242,0.1); }
-@media (max-width: 600px) {
-  .social-bar { display: none; }
+
+@media (max-width: 768px) {
+  .social-bar {
+    gap: 2px;
+    padding: 0 4px;
+    margin-inline: 2px;
+  }
+  .social-icon {
+    width: 26px;
+    height: 26px;
+    font-size: 11px;
+  }
+}
+@media (max-width: 480px) {
+  /* Hide brand status text to make room */
+  .topbar .brand-info .status { display: none; }
+  .social-bar {
+    gap: 0;
+    padding: 0 2px;
+    margin-inline: 1px;
+  }
+  .social-icon {
+    width: 24px;
+    height: 24px;
+    font-size: 10px;
+  }
+  /* Slightly tighter top bar overall */
+  .topbar-actions { gap: 4px; }
 }
 
 /* Video Library Section */
